@@ -21,5 +21,17 @@ public class Elephant extends Actor
         if(Greenfoot.isKeyDown("d")){
             move(2);
         }
+        
+        //Apple disappears once elephant touches it
+        
     }    
+    
+    public void eat(){
+        
+        if(isTouching(Apple.class)){
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple();
+        }
+    }
 }
