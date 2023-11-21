@@ -17,5 +17,12 @@ public class Apple extends Actor
         // Add your action code here.
         //Apple continously falls down
         setLocation(getX(), getY() + 1);
+        
+        //Remove apple and draw game over when apple gets to bottom
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight()){
+            world.gameOver();
+            
+        }
     }    
 }

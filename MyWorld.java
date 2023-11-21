@@ -37,6 +37,11 @@ public class MyWorld extends World
         scoreLabel.setValue(score);
     }
     
+    //End the game when the apple falls too far down
+    public void gameOver(){
+        Label gameOverLabel = new Label("Game Over", 100);
+    }    
+    
     //Create an apple in a random x-value at the top
     public void createApple(){
         Apple apple = new Apple();
