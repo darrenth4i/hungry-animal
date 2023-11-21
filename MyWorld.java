@@ -13,6 +13,10 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    
+    public int score = 0;
+    Label scoreLabel;
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -21,10 +25,15 @@ public class MyWorld extends World
         Elephant elephant = new Elephant();
         addObject(elephant, 300, 200);
         
-        Label scoreLabel = new Label(0, 80);
-        addObject(scoreLabel, 20, 20);
+        scoreLabel = new Label(0, 80);
+        addObject(scoreLabel, 20, 30);
         
         createApple();
+    }
+    
+    public void increaseScore(){
+        score++;
+        scoreLabel.setValue(score);
     }
     
     public void createApple(){
