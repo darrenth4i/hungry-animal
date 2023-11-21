@@ -31,11 +31,13 @@ public class MyWorld extends World
         createApple();
     }
     
+    //Method to increase the score by 1
     public void increaseScore(){
         score++;
         scoreLabel.setValue(score);
     }
     
+    //Create an apple in a random x-value at the top
     public void createApple(){
         Apple apple = new Apple();
         int x = Greenfoot.getRandomNumber(600);
