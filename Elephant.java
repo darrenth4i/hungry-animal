@@ -23,7 +23,7 @@ public class Elephant extends Actor
         }
         
         //Apple disappears once elephant touches it
-        
+        eat();
     }    
     
     public void eat(){
