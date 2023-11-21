@@ -22,8 +22,8 @@ public class Apple extends Actor
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight()){
             world.gameOver();
+            //Remove apple object when game is over
             world.removeObject(this);
-            
         }
     }    
 }
