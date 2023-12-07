@@ -16,6 +16,8 @@ public class MyWorld extends World
     
     public int score = 0;
     Label scoreLabel;
+    private long endTimer;
+    private boolean ended = false;
     
     public MyWorld()
     {    
@@ -41,7 +43,15 @@ public class MyWorld extends World
     public void gameOver(){
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel, 300, 200);
+        ended = true;
+        endTimer = System.currentTimeMillis();
     }    
+    
+    public void act() {
+        if (ended && System.currentTimeMillis() - endTimer > 2000) {
+            Greenfoot.setWorld(new MyWorld());
+        }
+    }
     
     //Create an apple in a random x-value at the top
     public void createApple(){

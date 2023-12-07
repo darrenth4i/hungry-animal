@@ -37,6 +37,7 @@ public class Elephant extends Actor
             world.createApple();
             //Add 1 to score
             world.increaseScore();
+            
         }
     }
 }
